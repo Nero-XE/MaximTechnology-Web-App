@@ -1,0 +1,425 @@
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(../media/fonts/Roboto-Regular.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 50rem;
+}
+
+* {
+    font-family: "Roboto Regular";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.login-header {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 50%;
+}
+
+.main-header {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+    display: none;
+}
+
+.notify-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+main {
+    text-align: center;
+}
+
+.main-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.top-nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.top-nav {
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 16px 0 16px;
+    gap: 16px;
+    border-radius: 12px 12px 0 0;
+}
+
+.bottom-nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottom-nav {
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 16px 16px 16px;
+    gap: 16px;
+    border-radius: 0 0 12px 12px;
+}
+
+.common-form {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+    gap: 64px;
+    border-radius: 12px;
+}
+
+.common-form-alt {
+    width: 1100px;
+    height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px;
+    gap: 32px;
+    border-radius: 0 12px;
+}
+
+.universal-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.universal-form input, select {
+    width: 100%;
+}
+
+#add-anket-form {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.ankets-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 0 7px 7px 7px;
+    overflow-x: hidden;
+}
+
+.static-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    border-radius: 0 7px 7px 7px;
+    overflow-x: hidden;
+}
+
+.static-inner-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 16px;
+}
+
+.ankets-type-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.ankets-type-header {
+    font-size: 12px;
+}
+
+.form-wrapper-inline {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.form-wrapper-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.form-wrapper-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.anketa-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 32px;
+    border-radius: 7px;
+    transition: max-height .5s ease;
+    overflow: hidden;
+    max-height: 51px;
+}
+
+.anketa-item[open] {
+    padding: 32px;
+    max-height: 1000px;
+}
+
+.anketa-item summary {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.anketa-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.anketa-item img {
+    transition: transform .5s ease;
+    margin-left: 10px;
+}
+
+.anketa-item[open] img {
+    transform: rotate(180deg);
+}
+
+.anketa-info {
+    margin-top: 32px;
+    border-radius: 7px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.ankets-control {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.anketa-info th, .anketa-info tr, .anketa-info tr td {
+    padding: 16px;
+}
+
+.anketa-info td {
+    width: 50%;
+}
+
+.statistic-table td {
+    width: 20px;
+}
+
+
+.anketa-info th tr td {
+    width: 350px;
+}
+
+.anketa-info tr:nth-child(1), .anketa-info th {
+    border-radius: 7px 7px 0 0;
+}
+
+.anketa-info tr:nth-last-child(1) {
+    border-radius: 0 0 7px 7px;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.search-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 16px
+}
+
+.search-form-wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.search-form-wrapper input[type="search"] {
+    width: 100%;
+    border-radius: 7px 0 0 7px;
+}
+
+.search-form-wrapper input[type="submit"] {
+    border-radius: 0 7px 7px 0;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.login-form-wrapper-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+#login-form input, .login-form-wrapper-input input {
+    width: 272px;
+}
+
+.inp {
+    font-size: 12px;
+    padding: 16px;
+    border: 0;
+    border-radius: 7px;
+}
+
+.inp:focus {
+    outline: none;
+}
+
+.btn-primary {
+    font-size: 12px;
+    padding: 16px 32px;
+    border: 0;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.btn-second {
+    font-size: 12px;
+    padding: 16px 32px;
+    border: 0;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+progress {
+    border-radius: 7px;
+    overflow: hidden;
+    height: 8px;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 7px;
+}
+
+#add-anket-form, #add-anket-form input, #add-anket-form select {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.anketa-info-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 0 7px 7px 7px;
+    overflow-x: hidden;
+}
+
+.profile-moodle-wrapper {
+    width: 50%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mails-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mails-header {
+    margin: 32px 0 16px 0;
+}
+
+#add-new-mail {
+    margin-top: 32px;
+}
+
+.anketa-info-wrapper-2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}

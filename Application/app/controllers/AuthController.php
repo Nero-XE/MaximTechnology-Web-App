@@ -1,6 +1,6 @@
 <?php
 //Контроллер авторизации
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     session_start();
     require_once '../../config/database.php';
     

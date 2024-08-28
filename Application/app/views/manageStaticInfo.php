@@ -52,14 +52,14 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <p class="mails-header" style="margin-top: 16px;">Города</p>
                     <div class="static-inner-wrapper">
-                        <form action="../controllers/AddCityController.php" method="post" id="add-city" class="universal-form">
+                        <form action="../controllers/CityController.php" method="post" id="add-city" class="universal-form">
                             <p class="ankets-type-header">Добавить город</p>
                             <input type="text" name="city_name" class="inp" placeholder="Название города">
                             <div class="form-control">
-                                <input class="btn-primary" type="submit" value="Добавить город">
+                                <input class="btn-primary" type="submit" value="Добавить город" name="addCity">
                             </div>
                         </form>
-                        <form action="../controllers/DelCityController.php" method="post" id="edit-city" class="universal-form">
+                        <form action="../controllers/CityController.php" method="post" id="edit-city" class="universal-form">
                             <p class="ankets-type-header">Удалить город</p>
                             <select name="city" class="inp">
                                 <?php 
@@ -70,7 +70,7 @@ if (!isset($_SESSION['user'])) {
                                 <?php } ?>
                             </select>
                             <div class="form-control">
-                                <input class="btn-primary" type="submit" value="Удалить">
+                                <input class="btn-primary" type="submit" value="Удалить" name="delCity">
                             </div>
                         </form>                  
                     </div>

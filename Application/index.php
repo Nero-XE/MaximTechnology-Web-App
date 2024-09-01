@@ -51,6 +51,15 @@ require_once 'config/database.php';
             right: 32px;
         }
 
+        #logo-index {
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+
+        #logo-index.visible {
+            opacity: 1;
+        }
+
         progress::-webkit-progress-bar {
             background-color: var(--background-light);
         }
@@ -64,20 +73,17 @@ require_once 'config/database.php';
     <?php if (isset($_SESSION['notify'])) {
         $log = date('Y-m-d H:i:s') . " Ошибка подключения к БД. Подробное описание ошибки: {$e->getMessage()}";
         file_put_contents(__DIR__ . '/logs/app.log', $log . PHP_EOL, FILE_APPEND);
-        $progress = 300;
         echo '<div id="notify"><img src="public/media/images/notify.svg" alt="notify"><div class="notify-text"><b>' . $_SESSION['notify'] . '</b><p>' . $_SESSION['description'] . '</p></div></div>';
     } else {
         $log = date('Y-m-d H:i:s') . " Успешное подключение к БД";
         file_put_contents(__DIR__ . '/logs/app.log', $log . PHP_EOL, FILE_APPEND);
-        $progress = 100;
         echo '<script>setTimeout(function(){ window.location.href = "app/views/login.php"; }, 1500);</script>';
     }
     unset($_SESSION['notify']) ?>
     </div>
     <main>
         <div class="loading-wrapper" style="aspect-ratio: 1 / 1;">
-            <img src="public/media/images/logo.svg" alt="logo">
-            <progress value="0" max="<?= $progress ?>"></progress>
+            <img src="public/media/images/logo.svg" alt="logo" id="logo-index">
         </div>
     </main>
 </body>

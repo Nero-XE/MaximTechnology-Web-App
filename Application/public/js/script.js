@@ -26,4 +26,12 @@ window.onload = function () {
           message.classList.remove('visible');
       }, 3000);
   }
+
+  var logo = document.getElementById('logo-index');
+  if (logo) {
+    setTimeout(function () {
+      logo.classList.add('visible');
+    }, 500);
+  }
 }
+

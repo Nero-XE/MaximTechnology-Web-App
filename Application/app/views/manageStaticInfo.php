@@ -28,14 +28,14 @@ if (!isset($_SESSION['user'])) {
                 <div class="static-wrapper">
                     <p class="mails-header" style="margin-top: 16px;">Образовательные учреждения</p>
                     <div class="static-inner-wrapper">
-                        <form action="../controllers/AddEduOrgController.php" method="post" id="add-edu-org" class="universal-form">
+                        <form action="../controllers/EduOrgController.php" method="post" id="add-edu-org" class="universal-form">
                             <p class="ankets-type-header">Добавить образовательное учреждение</p>
-                            <input type="text" name="edu_name" class="inp" placeholder="Название образовательного учреждения">
+                            <input type="text" name="edu_org_name" class="inp" placeholder="Название образовательного учреждения">
                             <div class="form-control">
-                                <input class="btn-primary" type="submit" value="Добавить образовательное учреждение">
+                                <input class="btn-primary" type="submit" value="Добавить образовательное учреждение" name="addEduOrg">
                             </div>
                         </form>
-                        <form action="../controllers/DelEduOrgController.php" method="post" id="edit-edu-org" class="universal-form">
+                        <form action="../controllers/EduOrgController.php" method="post" id="edit-edu-org" class="universal-form">
                             <p class="ankets-type-header">Удалить образовательного учреждения</p>
                             <select name="edu_org" class="inp">
                                 <?php 
@@ -46,7 +46,7 @@ if (!isset($_SESSION['user'])) {
                                 <?php } ?>
                             </select>
                             <div class="form-control">
-                                <input class="btn-primary" type="submit" value="Удалить">
+                                <input class="btn-primary" type="submit" value="Удалить" name="delEduOrg">
                             </div>
                         </form>
                     </div>

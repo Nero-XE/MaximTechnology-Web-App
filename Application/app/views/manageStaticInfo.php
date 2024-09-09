@@ -76,16 +76,16 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <p class="mails-header" style="margin-top: 16px;">Статусы анкет</p>
                     <div class="static-inner-wrapper">
-                        <form action="../controllers/AddCandidateStatus.php" method="post" id="add-candidate-statuses" class="universal-form">
+                        <form action="../controllers/CandidateStatusController.php" method="post" id="add-candidate-statuses" class="universal-form">
                             <p class="ankets-type-header">Добавить статус анкеты</p>
-                            <input type="text" name="candidate-status-name" class="inp" placeholder="Название статуса">
+                            <input type="text" name="candidate_status_name" class="inp" placeholder="Название статуса">
                             <div class="form-control">
-                                <input class="btn-primary" type="submit" value="Добавить статус">
+                                <input class="btn-primary" type="submit" value="Добавить статус" name="addCandStat">
                             </div>
                         </form>
-                        <form action="../controllers/DelCandidateStatus.php" method="post" id="edit-candidate-statuses" class="universal-form">
+                        <form action="../controllers/CandidateStatusController.php" method="post" id="edit-candidate-statuses" class="universal-form">
                             <p class="ankets-type-header">Удалить статус</p>
-                            <select name="candidate_statuses" class="inp">
+                            <select name="candidate_status" class="inp">
                                 <?php 
                                 $sql2 = "SELECT * FROM `candidate_statuses`";
                                 $stmt2 = $pdo->query($sql2);
@@ -94,7 +94,7 @@ if (!isset($_SESSION['user'])) {
                                 <?php } ?>
                             </select>
                             <div class="form-control">
-                                <input class="btn-primary" type="submit" value="Удалить">
+                                <input class="btn-primary" type="submit" value="Удалить" name="delCandStat">
                             </div>
                         </form>
                     </div>

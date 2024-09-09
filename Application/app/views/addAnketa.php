@@ -26,7 +26,7 @@ if (!isset($_SESSION['user'])) {
                 </nav>
             </div>
             <div class="common-form-alt">
-                <form action="../controllers/AddCandidate.php" method="post" id="add-anket-form">
+                <form action="../controllers/CandidateController.php" method="post" id="add-anket-form">
                     <p class="ankets-type-header">Фамилия Имя Отчество</p>
                     <input type="text" name="full_name" class="inp" placeholder="Иванов Иван Иванович" required>
                     <p class="ankets-type-header">Статус кандидата</p>
@@ -101,7 +101,7 @@ if (!isset($_SESSION['user'])) {
             </div>
             <div class="bottom-nav-wrapper">
                 <nav class="bottom-nav">
-                    <input form="add-anket-form" type="submit" class="btn-primary" value="Создать анкету">
+                    <input form="add-anket-form" type="submit" class="btn-primary" value="Создать анкету" name="addCandidate">
                 </nav>
             </div>
         </div>

@@ -441,9 +441,9 @@ if (!isset($_SESSION['user'])) {
             </div>
             <div class="bottom-nav-wrapper">
                 <nav class="bottom-nav">
-                    <form action="../controllers/DelCandidate.php" method="post">
+                    <form action="../controllers/CandidateController.php" method="post">
                         <input type="hidden" name="candidate_id" value="<?= $candidate_id ?>">
-                        <input class="btn-primary" type="submit" value="Удалить аккаунт">
+                        <input class="btn-primary" type="submit" value="Удалить аккаунт" name="delCandidate">
                     </form>
                 </nav>
             </div>

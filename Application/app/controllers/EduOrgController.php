@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addEduOrg'])) {
     config();
     $edu_org_name = trim($_POST["edu_org_name"]);
 
-    // Подготовка запроса для добавления нового города
+    // Подготовка запроса для добавления нового образовательного учреждения
     $sql = "INSERT INTO `education_organization` (`edu_org_name`) VALUES (:edu_org_name)";
     $stmt = $pdo->prepare($sql);
 

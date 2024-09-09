@@ -15,7 +15,7 @@ if (isset($_SESSION['user'])) {
     }
     unset($_SESSION['notify']) ?>
     <header>
-        <h1 class="login-header">Авторизация</h1>
+        <h1 class="login-header"><?= $pagename ?></h1>
     </header>
     <main>
         <div class="common-form">

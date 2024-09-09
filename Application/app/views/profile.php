@@ -2,7 +2,7 @@
 //Страница с подробной информацией об анкете
 require_once '../../config/database.php';
 $pagedescription = "Страница с развернутой информацией о кандидате";
-$pagename = "Подробнее о кандидате"; 
+$pagename = "Профиль кандидата"; 
 include 'partials/header.php';
 
 if (!isset($_SESSION['user'])) {
@@ -16,8 +16,9 @@ if (!isset($_SESSION['user'])) {
     }
     unset($_SESSION['notify']) ?>
     <header>
-        <h1 class="main-header">Главная</h1>
+        <h1 class="main-header"><?= $pagename ?></h1>
     </header>
+    <?php include 'partials/nav.php'; ?>
     <main>
         <div class="main-wrapper">
             <div class="top-nav-wrapper">

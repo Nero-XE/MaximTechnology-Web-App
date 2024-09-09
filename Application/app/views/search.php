@@ -19,15 +19,11 @@ if (!isset($_SESSION['user'])) {
     }
     unset($_SESSION['notify']) ?>
     <header>
-        <h1 class="main-header">Резултаты поиска</h1>
+        <h1 class="main-header"><?= $pagename ?></h1>
     </header>
+    <?php include 'partials/nav.php'; ?>
     <main>
         <div class="main-wrapper">
-            <div class="top-nav-wrapper">
-                <nav class="top-nav">
-                    <a href="main.php" class="btn-second">Назад</a>
-                </nav>
-            </div>
             <div class="common-form-alt">
                 <div class="search-wrapper">
                     <form action="../controllers/SearchController.php" method="post" class="search-form-wrapper">

@@ -16,16 +16,11 @@ if (!isset($_SESSION['user'])) {
     }
     unset($_SESSION['notify']) ?>
     <header>
-        <h1 class="main-header">Главная</h1>
+        <h1 class="main-header"><?= $pagename ?></h1>
     </header>
+    <?php include 'partials/nav.php'; ?>
     <main>
         <div class="main-wrapper">
-            <div class="top-nav-wrapper">
-                <nav class="top-nav">
-                    <a href="statistic.php" class="btn-second">Статистика</a>
-                    <a href="addAnketa.php" class="btn-primary">Добавить анкету</a>
-                </nav>
-            </div>
             <div class="common-form-alt">
                 <div class="search-wrapper">
                     <input type="button" value="Фильтр" class="btn-second">
@@ -104,12 +99,6 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <?php } ?>
                 </div>
-            </div>
-            <div class="bottom-nav-wrapper">
-                <nav class="bottom-nav">
-                    <a href="manageStaticInfo.php" class="btn-second">Управление статическими данными</a>
-                    <a href="../controllers/LogoutController.php" class="btn-primary">Выход</a>
-                </nav>
             </div>
         </div>
     </main>

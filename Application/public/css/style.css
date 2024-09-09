@@ -32,9 +32,8 @@ body {
 .main-header {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 10%;
+    top: 48px;
     left: 50%;
-    display: none;
 }
 
 .notify-text {
@@ -52,6 +51,8 @@ main {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    height: 100vh;
+    padding: 96px 0 32px 0;
 }
 
 .top-nav-wrapper {
@@ -102,14 +103,14 @@ main {
 
 .common-form-alt {
     width: 1100px;
-    height: 760px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 32px;
     gap: 32px;
-    border-radius: 0 12px;
+    border-radius: 12px;
 }
 
 .universal-form {
@@ -422,4 +423,33 @@ progress::-webkit-progress-bar {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+}
+
+.nav-bar {
+    height: 100vh;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 32px;
+}
+
+.nav-separator {
+    height: 2px;
+    width: 100%;
+    border-radius: 1px;
+}
+
+.nav-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav-button {
+    transition: all .25s ease-in-out;
+}
+
+.nav-button:hover {
+    filter: invert(56%) sepia(47%) saturate(696%) hue-rotate(126deg) brightness(92%) contrast(95%);
 }

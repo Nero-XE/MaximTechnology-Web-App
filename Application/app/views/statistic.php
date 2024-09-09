@@ -16,15 +16,11 @@ if (!isset($_SESSION['user'])) {
     }
     unset($_SESSION['notify']) ?>
     <header>
-        <h1 class="main-header">Главная</h1>
+        <h1 class="main-header"><?= $pagename ?></h1>
     </header>
+    <?php include 'partials/nav.php'; ?>
     <main>
         <div class="main-wrapper">
-            <div class="top-nav-wrapper">
-                <nav class="top-nav">
-                    <a href="main.php" class="btn-second">Назад</a>
-                </nav>
-            </div>
             <?php
                 //Получение всех ОУ
                 $sql = "SELECT * FROM education_organization";
@@ -115,12 +111,6 @@ if (!isset($_SESSION['user'])) {
                         </tr>
                     </table>
                 </div>
-            </div>
-            <div class="bottom-nav-wrapper">
-                <nav class="bottom-nav">
-                    <a href="manageStaticInfo.php" class="btn-second">Управление статическими данными</a>
-                    <a href="../controllers/LogoutController.php" class="btn-primary">Выход</a>
-                </nav>
             </div>
         </div>
     </main>

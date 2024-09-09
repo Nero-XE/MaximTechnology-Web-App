@@ -141,5 +141,14 @@ if (!isset($pdo)) {
         progress::-webkit-progress-value {
             background-color: var(--background-turquoise)
         }
+
+        .nav-bar {
+            background-color: var(--background-light);
+            box-shadow: inset -1px 0 0 var(--background-dark-half-trans);
+        }
+
+        .nav-separator {
+            background-color: var(--background-dark-half-trans);
+        }
     </style>
 </head>

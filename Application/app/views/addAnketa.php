@@ -16,15 +16,11 @@ if (!isset($_SESSION['user'])) {
     }
     unset($_SESSION['notify']) ?>
     <header>
-        <h1 class="main-header">Главная</h1>
+        <h1 class="main-header"><?= $pagename ?></h1>
     </header>
+    <?php include 'partials/nav.php'; ?>
     <main>
         <div class="main-wrapper">
-            <div class="top-nav-wrapper">
-                <nav class="top-nav">
-                    <a href="main.php" class="btn-second">Отменить создание анкеты</a>
-                </nav>
-            </div>
             <div class="common-form-alt">
                 <form action="../controllers/CandidateController.php" method="post" id="add-anket-form">
                     <p class="ankets-type-header">Фамилия Имя Отчество</p>
@@ -97,12 +93,8 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <p class="ankets-type-header">Коментарии</p>
                     <input type="text" name="commentary" class="inp" placeholder="Харакетристика или отзыв" autocomplete="off">
+                    <input type="submit" class="btn-primary" value="Создать анкету" name="addCandidate">
                 </form>
-            </div>
-            <div class="bottom-nav-wrapper">
-                <nav class="bottom-nav">
-                    <input form="add-anket-form" type="submit" class="btn-primary" value="Создать анкету" name="addCandidate">
-                </nav>
             </div>
         </div>
     </main>

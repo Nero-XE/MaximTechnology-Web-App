@@ -93,7 +93,7 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <p class="ankets-type-header">Коментарии</p>
                     <input type="text" name="commentary" class="inp" placeholder="Харакетристика или отзыв" autocomplete="off">
-                    <input type="submit" class="btn-primary" value="Создать анкету" name="addCandidate">
+                    <input type="submit" class="btn-primary" value="Создать анкету" name="addCandidate" style="text-align: center;">
                 </form>
             </div>
         </div>

@@ -21,11 +21,6 @@ if (!isset($_SESSION['user'])) {
     <?php include 'partials/nav.php'; ?>
     <main>
         <div class="main-wrapper">
-            <div class="top-nav-wrapper">
-                <nav class="top-nav">
-                    <a href="main.php" class="btn-second">Назад</a>
-                </nav>
-            </div>
             <?php 
                 $candidate_id = $_GET['id'];
 
@@ -439,14 +434,10 @@ if (!isset($_SESSION['user'])) {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="bottom-nav-wrapper">
-                <nav class="bottom-nav">
-                    <form action="../controllers/CandidateController.php" method="post">
-                        <input type="hidden" name="candidate_id" value="<?= $candidate_id ?>">
-                        <input class="btn-primary" type="submit" value="Удалить аккаунт" name="delCandidate">
-                    </form>
-                </nav>
+                <form action="../controllers/CandidateController.php" method="post" class="del-candidate">
+                    <input type="hidden" name="candidate_id" value="<?= $candidate_id ?>">
+                    <input class="btn-primary" type="submit" value="Удалить аккаунт" name="delCandidate">
+                </form>
             </div>
         </div>
     </main>

@@ -23,10 +23,10 @@ if (isset($_SESSION['user'])) {
             <form action="../controllers/AuthController.php" method="post" id="login-form">
                 <img src="../../public/media/images/logo.svg" alt="logo">
                 <div class="login-form-wrapper-input">
-                    <input type="text" placeholder="Логин" class="inp" name="login">
-                    <input type="password" placeholder="Пароль" class="inp" name="password">
+                    <input type="text" placeholder="Логин" class="inp" name="login" required>
+                    <input type="password" placeholder="Пароль" class="inp" name="password" required>
                 </div>
-                <input type="submit" value="Войти" class="btn-primary">
+                <input type="submit" value="Войти" class="btn-primary" name="auth">
             </form>
         </div>
     </main>
